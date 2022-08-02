@@ -1,0 +1,26 @@
+PassInstructions = "Make sure that the password is alphanumeric and contains a capital Letter\n\n"
+print(PassInstructions)
+list = []
+list[:0]= input()
+save = list
+cond1, cond2, cond3 = 0,0,0
+for char in list:
+    A = char.isupper()
+    if A == True :
+        cond1 = True
+        break
+for char in list :
+    B = char.islower()
+    if B == True:
+        cond2 = True
+        break
+for char in list :
+    C = char.isdigit()
+    if C == True:
+        cond3 = True
+        break
+if cond1 and cond2 and cond3 == True:
+        print(save)
+else:
+    print("Password Not Valid")
+    print(PassInstructions)
